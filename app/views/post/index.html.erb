@@ -1,19 +1,30 @@
 <div class="main post-index">
-  <table border="1">
-    <tr>
-      <th>No</th>
-      <th>Judul</th>
-      <th>Deskripsi</th>
-    </tr>
-    <% 
-    no=0 
-    @data.each do |value| %>
-    <tr>
-      <td><%= no=no+1 %></td>
-      <td><%= value.title %></td>
-      <td><%= value.desc %></td>
-    </tr>
+  <div class="container">
+    <table border="1">
+      <tr>
+        <th>No</th>
+        <th>Judul</th>
+        <th>Deskripsi</th>
+        <th>Action</th>
+      </tr>
+      <% 
+      no=0 
+      @data.each do |value| %>
+      <tr>
+        <td><%= no=no+1 %></td>
+        <td><%= value.title %></td>
+        <td><%= value.desc %></td>
+        <td>
+          <a href="/post/detail/<%= value.id %>">Detail</a>
+          <a href="">Edit</a>
+          <a href="">Delete</ta>
 
-    <% end %>
-  </table>
+        </td>
+      </tr>
+  
+      <% end %>
+    </table>
+
+  </div>
+ 
 </div>
