@@ -1,0 +1,17 @@
+<% firstpost="Belajar Ruby On Rails" %> <% secondpost="Macam macam bahasa
+pemprograman" %> <% data=[ "1. Pemprograman Ruby", "2. Pemprograman C++", "3.
+Pemprograman JavaScript", "4. Pemprograman Java", "5. Pemprograman PHP", "6.
+Pemprograman Python", "7. Pemprograman Perl", "8. Pemprograman C",] %>
+
+<div class="main post-index">
+  <div class="container">
+    <div class="posts-index-item"><%= firstpost %> <br /></div>
+
+    <div class="posts-index-item"><%= secondpost%> <br /></div>
+
+    <% data.each do |value| %>
+    <div class="posts-index-item"><%= value %></div>
+
+    <% end %>
+  </div>
+</div>
