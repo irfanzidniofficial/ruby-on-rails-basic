@@ -36,4 +36,12 @@ class PostController < ApplicationController
 
   end
 
+  def delete
+    @data= Post.find_by(id: params[:id])
+    @data.destroy
+
+    flash[:message] = "Data berhasil di hapus"
+    redirect_to("/post/index")
+  end
+
 end

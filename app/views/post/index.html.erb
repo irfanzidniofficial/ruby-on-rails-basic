@@ -19,7 +19,7 @@
         <td>
           <a href="/post/detail/<%= value.id %>">Detail</a>
           <a href="/post/edit/<%= value.id %>">Edit</a>
-          <a href="">Delete</ta>
+          <a href="/post/delete/<%= value.id %>" onclick="return confirm('Yakin hapus data..?')">Delete</ta>
 
         </td>
       </tr>

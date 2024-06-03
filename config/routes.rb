@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/post/create", to: "post#create"
   get "/post/edit/:id", to: "post#edit"
   post "/post/update/:id", to: "post#update"
+  get "/post/delete/:id", to: "post#delete"
  
   root "home#index"
 end
