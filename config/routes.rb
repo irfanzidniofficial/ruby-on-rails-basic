@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/contact', to: "home#contact"
   get "/post", to: "post#index"
   get "/post/detail/:id", to: "post#detail"
+  get "/post/input", to: "post#input"
+  post "/post/create", to: "post#create"
  
   root "home#index"
 end
