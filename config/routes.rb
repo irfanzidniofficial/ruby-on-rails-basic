@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "/post/detail/:id", to: "post#detail"
   get "/post/input", to: "post#input"
   post "/post/create", to: "post#create"
+  get "/post/edit/:id", to: "post#edit"
+  post "/post/update/:id", to: "post#update"
  
   root "home#index"
 end

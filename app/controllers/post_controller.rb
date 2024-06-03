@@ -9,7 +9,6 @@ class PostController < ApplicationController
   end
 
   def input
-
   end
 
   def create
@@ -20,4 +19,21 @@ class PostController < ApplicationController
 
     redirect_to("/post/index")
   end
+
+  def edit
+    @data= Post.find_by(id: params[:id])
+  end
+
+  def update
+
+    @data= Post.find_by(id: params[:id])
+    @data.title = params[:title]
+    @data.desc = params[:desc]
+    @data.save
+
+    flash[:message] = "Data berhasil di update"
+    redirect_to("/post/index")
+
+  end
+
 end
